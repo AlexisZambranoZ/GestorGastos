@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Gestor de gastos</title>
+	<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+	<header>
+		<h1>Gestor de gastos</h1>
+	</header>
+	<main>
+		<section>
+			<h2>Saldo actual</h2>
+			<p id="saldo-actual">$0.00</p>
+			<div id="barra-progreso">
+				<div class="relleno"></div>
+			</div>
+		</section>
+		<section>
+			<h2>Agregar gasto</h2>
+			<form>
+				<label for="nombre">Nombre:</label>
+				<input type="text" id="nombre" name="nombre" required>
+				<label for="cantidad">Cantidad:</label>
+				<input type="number" id="cantidad" name="cantidad" min="0.01" step="0.01" required>
+				<label for="fecha">Fecha:</label>
+				<input type="date" id="fecha" name="fecha" required>
+				<button type="submit">Agregar</button>
+			</form>
+		</section>
+		<section>
+			<h2>Lista de gastos</h2>
+			<ul id="lista-gastos"></ul>
+		</section>
+	</main>
+	<script src="/index.js"></script>
+</body>
+</html>
